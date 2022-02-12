@@ -1,4 +1,4 @@
-package onetomanyrelation;
+package onetoonerelation;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -24,23 +24,13 @@ public class MainLogic {
 	    Customer c1 = new Customer();
 	    c1.setCustomerId(101);
 	    c1.setCustomerName("varun");
+	
+	    Vendor vendor = new Vendor();
+	    vendor.setVendorId(201);
+	    vendor.setVendorName("FlipKart");
 	    
-	    Customer c2 = new Customer();
-	    c2.setCustomerId(102);
-	    c2.setCustomerName("kumar");
-	    
-	    Vendor v1 = new Vendor();
-	    v1.setVendorId(201);
-	    v1.setVendorName("FlipKart");
-	    
-        Set s = new HashSet();
-        
-        s.add(c1);
-        s.add(c2);
-        
-        v1.setObj(s);
-        
-        session.save(v1);
+               
+        session.save(vendor);
 	    t.commit();  
 		session.close();
 

@@ -1,4 +1,4 @@
-package onetomanyrelation;
+package onetoonerelation;
 
 import java.util.Properties;
 
@@ -18,7 +18,7 @@ public class HibernateUtil {
                 // Hibernate settings equivalent to hibernate.cfg.xml's properties
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/employee");
+                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/mondee");
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "root");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");

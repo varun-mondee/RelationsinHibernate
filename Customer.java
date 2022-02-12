@@ -1,4 +1,4 @@
-package onetomanyrelation;
+package onetoonerelation;
 
 import javax.persistence.*;
 
@@ -12,6 +12,10 @@ public class Customer {
 	@Column(name = "customername")
 	private String customerName;
 
+	@OneToOne(fetch = FetchType.LAZY, targetEntity = Vendor.class, cascade = CascadeType.ALL)
+
+	private Vendor vendor;
+	
 	public int getCustomerId() {
 		return CustomerId;
 	}

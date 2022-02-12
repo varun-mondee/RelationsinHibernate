@@ -1,4 +1,4 @@
-package onetomanyrelation;
+package onetoonerelation;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -14,8 +14,7 @@ public class Vendor {
 	@Column(name = "vname")
 	private String vendorName;
 	
-	@OneToMany(fetch = FetchType.LAZY, targetEntity = Customer.class, cascade = CascadeType.ALL)
-	@JoinColumn(name = "fkvid", referencedColumnName = "vid")
+	@OneToOne(fetch = FetchType.LAZY, targetEntity = Customer.class, cascade = CascadeType.ALL)
 	 
 	private Set obj;
 
